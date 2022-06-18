@@ -42,7 +42,7 @@ if not exists(postFilePath):
         writer.writeheader()
 
         count = 0
-        for post in get_posts(facebookId, options={"allow_extra_requests": False}, credentials=credentials):
+        for post in get_posts(facebookId, pages=2000, options={"allow_extra_requests": False}, credentials=credentials):
             postUrl = post['post_url']
             postCreatedAt = post['time']
 
